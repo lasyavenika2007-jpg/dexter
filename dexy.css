@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* --- Global Reset & Fonts --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Clean, modern font */
+    background-color: #0d0d0d;
+    /* Very dark background for the whole page */
+    color: #e0e0e0;
+    /* Light text color */
+}
+
+/* --- Navigation Bar Container --- */
+.navbar {
+    background-color: #1a1a1a;
+    /* Dark gray, slightly lighter than body */
+    color: #f7f7f7;
+    padding: 10px 20px;
+    display: flex;
+    /* Flexbox for alignment */
+    justify-content: space-between;
+    /* Puts the header on one side, links on the other */
+    align-items: center;
+    /* Vertically center items */
+
+    /* Subtle shadow for depth */
+}
+
+/* --- Header/Title Styling --- */
+.navbar-header h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #cc0000;
+    /* Dark, menacing red for the title */
+    margin: 0;
+    letter-spacing: 1px;
+
+}
+
+/* --- Navigation Links List --- */
+.nav-links {
+    list-style: none;
+    /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Arrange links horizontally */
+    gap: 25px;
+    /* Space between links */
+}
+
+.nav-links li {
+    padding: 0;
+}
+
+/* --- Link Styling (The "Toggle Buttons") --- */
+.nav-links a {
+    text-decoration: none;
+    /* Remove underline */
+    color: #e0e0e0;
+    /* Light gray text */
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    /* Prepare for border on hover */
+    transition: color 0.3s, border-color 0.3s;
+}
+
+/* --- Hover Effect (Blood Splatter Vibe) --- */
+.nav-links a:hover {
+    color: #cc0000;
+    /* Red text on hover */
+    border-color: #cc0000;
+    /* Subtle red outline on hover */
+    background-color: rgba(204, 0, 0, 0.1);
+    /* Very light red background */
+}
+
+/* --- The Toggle Button (Hamburger icon) - Hidden on desktop --- */
+.menu-toggle {
+    display: none;
+    /* Hide the button by default on larger screens */
+}
+
+/* --- Hero Section Styling --- */
+.hero-section {
+    background-color: #0d0d0d;
+    /* Very dark background */
+    color: #e0e0e0;
+    padding: 80px 5%;
+    /* Padding top/bottom and sides */
+    text-align: center;
+    min-height: 400px;
+    /* Optional: If using a background image, add it here */
+    /* background-image: url('path/to/dexter-banner.jpg'); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-section::before {
+    /* Optional: Dark overlay to make text readable over an image */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* Dark transparency */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    /* Ensures content is above the dark overlay */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    color: #cc0000;
+    /* Signature Dexter Red */
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.hero-content strong {
+    color: #f7f7f7;
+    font-weight: bold;
+}
+
+/* --- Action Button Styling (for "Understand The Code of Harry") --- */
+.btn-dark {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #cc0000;
+    /* Red base color */
+    color: #f7f7f7;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid #cc0000;
+    border-radius: 4px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-dark:hover {
+    background-color: transparent;
+    /* Background fades away */
+    color: #cc0000;
+    /* Text stays red */
+    border-color: #cc0000;
+}
+
+/* --- Carousel Section Container --- */
+.carousel-container {
+    padding: 40px 0;
+    background-color: #000;
+    /* Pure black for a dramatic separation */
+}
+
+.carousel-container h2 {
+    text-align: center;
+    color: #cc0000;
+    margin-bottom: 30px;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+/* --- The Viewport (The Scrolling Container) --- */
+.carousel-viewport {
+    display: flex;
+    overflow-x: scroll;
+    /* Enables horizontal scrolling */
+
+
+    padding: 0 5%;
+    /* Padding on the sides so the first/last item is visible */
+    gap: 20px;
+    /* Space between the cards/items */
+}
+
+/* Hide the default scrollbar on some browsers for a cleaner look */
+.carousel-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- Individual Carousel Item (The Cards) --- */
+.carousel-item {
+    text-decoration: none;
+    color: inherit;
+    background-color: #1a1a1a;
+    border: 1px solid rgba(204, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+
+    /* Size and Snapping */
+    flex: 0 0 300px;
+    /* IMPORTANT: Fixes the width of the card */
+
+    /* Snap point at the start of the item */
+    height: 400px;
+    /* Fixed height for consistency */
+    position: relative;
+}
+
+.carousel-item:hover {
+    transform: translateY(-5px);
+    /* Lift slightly on hover */
+    box-shadow: 0 8px 15px rgba(204, 0, 0, 0.4);
+    /* Red glow on hover */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 70%;
+    /* Image takes up 70% of card height */
+    object-fit: cover;
+    /* Ensures image covers the space without distortion */
+    display: block;
+}
+
+/* --- Caption/Text Overlay --- */
+.caption {
+    padding: 15px;
+    text-align: left;
+    height: 30%;
+    box-sizing: border-box;
+    /* Includes padding in height calculation */
+}
+
+.caption h3 {
+    color: #cc0000;
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+}
+
+.caption p {
+    color: #e0e0e0;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* --- Code Section Styling --- */
+.code-section {
+    background-color: #000;
+    /* Pure black for maximum mood contrast */
+    color: #e0e0e0;
+    padding: 60px 5%;
+    min-height: 500px;
+}
+
+.code-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.code-header h2 {
+    font-size: 2.2em;
+    color: #cc0000;
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+.rules-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allows blocks to stack on smaller screens */
+}
+
+/* --- Individual Rule Block Styling --- */
+.rule-block {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(204, 0, 0, 0.2);
+    /* Subtle red glow */
+    width: 100%;
+    max-width: 450px;
+    /* Two columns on large screens */
+}
+
+.rule-block h3 {
+    color: #f7f7f7;
+    border-bottom: 2px solid #cc0000;
+    /* Red underline */
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.rule-block p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.rule-block ul {
+    list-style: none;
+    /* Remove default bullets */
+    padding: 0;
+    margin-top: 20px;
+}
+
+.rule-block li {
+    background-color: #0d0d0d;
+    /* Slightly darker background for list items */
+    padding: 10px;
+    margin-bottom: 8px;
+    border-left: 5px solid #cc0000;
+    /* Red emphasis bar */
+}
+
+.rule-block li strong {
+    color: #cc0000;
+    margin-right: 5px;
+}
+
+/* --- Characters Section Styling --- */
+.characters-section {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.characters-section h2 {
+    font-size: 2.2em;
+    color: #cc0000;
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    margin-bottom: 40px;
+    font-style: italic;
+    color: #aaa;
+}
+
+.character-grid {
+    display: grid;
+    /* Create three columns of equal size, or stack on small screens */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Individual Character Card --- */
+.character-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+    border: 1px solid rgba(204, 0, 0, 0.2);
+}
+
+.character-card:hover {
+    transform: translateY(-8px);
+    /* Lift card on hover */
+    box-shadow: 0 10px 20px rgba(204, 0, 0, 0.6);
+    /* Stronger red glow */
+}
+
+.character-card img {
+    width: 100%;
+    height: 350px;
+    /* Fixed height for image consistency */
+    object-fit: cover;
+    display: block;
+}
+
+.info-box {
+    padding: 20px;
+    text-align: left;
+}
+
+.info-box h3 {
+    color: #f7f7f7;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.6em;
+}
+
+.info-box .role {
+    color: #cc0000;
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.info-box hr {
+    border: 0;
+    height: 1px;
+    background-color: rgba(204, 0, 0, 0.5);
+    /* Half-transparent red divider */
+    margin: 15px 0;
+}
+
+.info-box p {
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: #ccc;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="dexy.css">
+
+<head> </head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-header">
+            <h1>Tonight's the Night</h1>
+        </div>
+
+        <button class="menu-toggle" aria-label="Toggle Navigation">
+            ☰
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#code">Code</a></li>
+            <li><a href="#characters">Characters</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h2>The Dark Passenger: Who is Dexter Morgan?</h2>
+
+                <p>
+                    <strong>Blood Spatter Analyst. Brother. Serial Killer.</strong><br>
+                    By day, he is the mild-mannered forensic expert for the Miami Metro Police Department. By night, he
+                    is the city's most methodical and moral monster, a vigilante serial killer who hunts those who have
+                    slipped through the cracks of the justice system.
+                </p>
+                <p>
+                    Dexter's life is defined by a deep-seated urge to kill, which he calls his **"Dark Passenger."** But
+                    thanks to his adoptive father, Harry, this compulsion is governed by a strict set of rules—**The
+                    Code of Harry**—that ensures his victims are never innocent.
+                </p>
+
+                <a href="#code" class="btn-dark">Understand The Code of Harry</a>
+            </div>
+
+
+        </section>
+    </main>
+    <section class="carousel-container">
+        <h2>The Victims (Code Compliant)</h2>
+
+        <div class="carousel-viewport">
+
+            <a href="#trinity" class="carousel-item">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/ArthurMitchellDexter.jpg/250px-ArthurMitchellDexter.jpg"
+                    alt="Trinity Killer Arthur Mitchell" loading="lazy">
+                <div class="caption">
+                    <h3>The Trinity Killer</h3>
+                    <p>Arthur Mitchell: Family Man, Monster.</p>
+                </div>
+            </a>
+
+            <a href="#ice-truck-killer" class="carousel-item">
+                <img src="data:image/jpeg;base64,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"
+                    alt="Ice Truck Killer Rudy Cooper" loading="lazy">
+                <div class="caption">
+                    <h3>The Ice Truck Killer</h3>
+                    <p>The first nemesis and a dark family secret.</p>
+                </div>
+            </a>
+
+            <a href="#brian-moser" class="carousel-item">
+                <img src="https://i.redd.it/whats-your-favorite-moment-from-brian-moser-v0-tpghivkat3xd1.jpg?width=719&format=pjpg&auto=webp&s=2b50dfaa67baa77774c4011003ab719d8c55c853"
+                    alt="Brian Moser" loading="lazy">
+                <div class="caption">
+                    <h3>Brian Moser</h3>
+                    <p>Dexter's biological brother and the ultimate test.</p>
+                </div>
+            </a>
+
+            <a href="#bay-harbor-butcher" class="carousel-item">
+                <img src="https://i1.sndcdn.com/artworks-S7esOhNSbRbZbr7T-7qsFTw-t500x500.jpg" alt="Bay Harbor Butcher"
+                    loading="lazy">
+                <div class="caption">
+                    <h3>The Bay Harbor Butcher</h3>
+                    <p>The legend and the fear he inspired.</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+    <section id="code" class="code-section">
+        <div class="code-header">
+            <h2>The Code of Harry: Rules for the Dark Passenger</h2>
+            <p class="intro-text">
+                The Code is the single most defining principle of Dexter Morgan's life. Taught by his adoptive father,
+                Harry Morgan, it is a complex set of guidelines designed to control Dexter's homicidal urges and, most
+                critically, keep him safe from the law.
+            </p>
+        </div>
+
+        <div class="rules-container">
+            <div class="rule-block primary-rule">
+                <h3>Principle I: Never Get Caught</h3>
+                <p><strong>This is the FIRST and most important rule.</strong> Harry, a police officer, taught Dexter
+                    all forensic procedures and protocols to ensure his kills are untraceable and to maintain the façade
+                    of a normal life.</p>
+                <ul>
+                    <li>**Leave No Traces:** The meticulous preparation of the kill room (plastic sheeting, special
+                        tools).</li>
+                    <li>**Blend In:** Maintain appearances, fake emotions, and never let anyone get too close
+                        (especially police colleagues).</li>
+                    <li>**Be Prepared:** Always carry M99 (Ketamine) and have an exit plan.</li>
+                </ul>
+            </div>
+
+            <div class="rule-block primary-rule">
+                <h3>Principle II: Only Kill the Guilty</h3>
+                <p><strong>The moral compass.</strong> Dexter must channel his urges toward those who truly deserve
+                    death—killers who have evaded the justice system or slipped through its cracks.</p>
+                <ul>
+                    <li>**Never Kill an Innocent:** This rule is sacrosanct and defines the line between vigilante and
+                        traditional serial killer.</li>
+                    <li>**Find Definitive Proof:** Intense research and concrete evidence must confirm the victim is a
+                        murderer (a step often broken by Dexter when emotionally compromised).</li>
+                    <li>**The Kill Must Serve a Purpose:** The victim must be someone the legal system cannot or will
+                        not stop from killing again.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="characters" class="characters-section">
+        <h2>The Main Players</h2>
+        <p class="section-subtitle">The complex relationships that make up Dexter's world—biological, adoptive, and
+            professional.</p>
+
+        <div class="character-grid">
+
+            <div class="character-card">
+                <img src="https://preview.redd.it/dexter-morgan-vs-brian-moser-v0-odsqco084xof1.jpg?width=640&crop=smart&auto=webp&s=aed28d71f84e1c4a2ee7a17a218e3c19e498298c"
+                    alt="Dexter Morgan Profile" loading="lazy">
+                <div class="info-box">
+                    <h3>Dexter Morgan</h3>
+                    <p class="role">Forensic Analyst | The Dark Passenger</p>
+                    <hr>
+                    <p>The anti-hero protagonist. He is the meticulous, yet emotionally stunted, serial killer who lives
+                        by his adoptive father's code. His greatest fear is exposure, and his greatest weakness is his
+                        desire for a normal life.</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/77/Debra_Morgan_from_Dexter%2C_season_one.jpg/250px-Debra_Morgan_from_Dexter%2C_season_one.jpg"
+                    alt="Debra Morgan Profile" loading="lazy">
+                <div class="info-box">
+                    <h3>Debra Morgan</h3>
+                    <p class="role">Detective/Lieutenant | The Moral Compass</p>
+                    <hr>
+                    <p>Dexter's adopted sister and partner in the police department. She is tough, foul-mouthed, and
+                        fiercely loyal to Dexter, serving as the main emotional anchor and ultimate tragic figure of the
+                        series.</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSakXkzki8WUO0WPjzF-IVzU_ay9vFejdXswQ&s"
+                    alt="Harry Morgan Profile" loading="lazy">
+                <div class="info-box">
+                    <h3>Harry Morgan</h3>
+                    <p class="role">Police Officer | The Architect</p>
+                    <hr>
+                    <p>Dexter's adoptive father. He discovered Dexter's homicidal urges and, unable to cure him, created
+                        **The Code** to ensure his son only killed those who deserved it. He appears throughout the
+                        series in flashbacks and as Dexter's internal guide.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
